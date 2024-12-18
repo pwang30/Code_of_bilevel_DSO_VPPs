@@ -4,7 +4,7 @@
 
 # Note 1: This code is full, easy to understand and replicate. Every line has its corresponding notes for a better understanding.
 # Note 2: For each model of VPP/Lower level, they have same codeing structure, the only difference is the parameters. 
-#         So, once you know how to structur anyone of them,please dive into DSO/Upper level modeling.
+#         So, once you know how to structur anyone of them, please dive into DSO/Upper level modeling.
 
 # 19.Dec.2024
 
