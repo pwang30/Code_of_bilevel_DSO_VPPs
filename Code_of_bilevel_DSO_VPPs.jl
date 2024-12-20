@@ -151,8 +151,8 @@ end
 #                then P_DSO,p=-P_DSO
 #             else if P_DSO>0                                (judgement 2）
 #                then P_DSO,s=0
-@variable(Upper(model), P_DSO_p[1:T])   # P_DSO_p
-@variable(Upper(model), P_DSO_s[1:T])   # P_DSO_s
+@variable(Upper(model), P_DSO_p[1:T])                                     # P_DSO_p
+@variable(Upper(model), P_DSO_s[1:T])                                     # P_DSO_s
 @variable(Upper(model), λ_PMs[i]<=λ_VPPp[i in 1:T]<=λ_PMp[i])             # bounds for VPP buying energy from DSO
 @variable(Upper(model), λ_PMs[i]<=λ_VPPs[i in 1:T]<=λ_PMp[i])             # bounds for VPP selling energy to DSO
 
@@ -202,7 +202,7 @@ a_MT[3]*sum(P_MT_3.*P_MT_3)+b_MT[3]*sum(P_MT_3)+c_MT[3]+
 
 BilevelJuMP. set_mode(model , BilevelJuMP. StrongDualityMode())
 # set_optimizer(model , SCIP.Optimizer)
-#set_attribute(model, "limits/gap", 0.0280)
+# set_attribute(model, "limits/gap", 0.0280)
 # set_time_limit_sec(model, 700.0)
 optimize!(model)
 
