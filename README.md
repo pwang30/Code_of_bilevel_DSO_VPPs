@@ -13,7 +13,7 @@ The main elements of this work include:
 - [Big-M method](https://en.wikipedia.org/wiki/Big_M_method)
 - [Karush–Kuhn–Tucker conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions)
 - [Distribution system operator (DSO)](https://www.camus.energy/blog/what-is-a-distribution-system-operator)
-- [Virtual power plant (VPP)](https://en.wikipedia.org/wiki/Virtual_power_plant#:~:text=A%20virtual%20power%20plant%20(VPP,aggregate%20and%20market%20their%20power.)
+- [Virtual power plant (VPP)](https://en.wikipedia.org/wiki/Virtual_power_plant#:~:text=A%20virtual%20power%20plant%20(VPP,aggregate%20and%20market%20their%20power)
 - [Julia programming](https://julialang.org/)
 
 The main work includes:
