@@ -14,7 +14,6 @@ This code has been tested in Julia.
 ----
 
 If you find something helpful or use this code for your own work, please cite this paper:
-<ol>
-  <li>  
+<ol> 
     Now "under review"
 </ol>  
