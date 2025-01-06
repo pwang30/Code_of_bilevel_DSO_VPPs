@@ -28,14 +28,6 @@ aggregators and DER, and market mechanisms (demand response, time-of-use tariff,
 
 ----
 
-**Discussion on the solving time and optimality**
-
-When solving the bilevel model (MINLP, convex lower level, non-convex upper level due to the binary variables in ‘big-M’ method), we encountered the problem of slow convergence of the duality gap [(this challenge can be effectively solved)](https://ieeexplore.ieee.org/abstract/document/8107289). In this extremely time-consuming process, we found that the solution when gap equals 2.59% was no more explanatory than the solution with a gap of 2.81%. Due to limited computer memory (simulations were carried out on
-a MacBook Air-M1, 2020), the solution with a gap equal to 2.59% was used for the case study, which is still better than the solution of Mode 1 (without binary variables, the upper
-and lower levels are both convex, duality gap = 0, the solution time is 0.05s), is further capable of proving the above results and analysis.
-
-----
-
 If you find something helpful or use this code for your own work, please cite this paper:
 <ol> 
     P. Wang, X. Zhang, and L. Badesa, "Analyzing the Role of the DSO in Electricity Trading of VPPs via a Stackelberg Game Model," 16th IEEE PowerTech 2025, under review.
