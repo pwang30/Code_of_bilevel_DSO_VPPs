@@ -23,7 +23,7 @@ The following is the program running process (assuming it is in Visual Studio Co
 - Step 2: In the comments of this program, there are necessary package installation instructions, just copy and paste.
 - Step 3: Run the program.
 
-**Note that this work can be easily extended to larger-scale problems due to the independence of each VPP, such as those involving more
+**Note that this work can be easily extended to larger-scale problems because of the structural independence of each agent, such as those involving more
 aggregators and DER, and market mechanisms (demand response, time-of-use tariff, etc.).**
 
 ----
