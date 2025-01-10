@@ -1,7 +1,6 @@
 # Analyzing the role of DSO in electricity trading of VPPs
 
-This code solves a **Stackelberg game via a bilevel optimization model**. Two approaches to solving this problem are included:
-
+This code solves a **Stackelberg game via a bilevel optimization model**.
 
 The main elements of this work include:
 - [Stackelberg game](https://en.wikipedia.org/wiki/Stackelberg_competition)
