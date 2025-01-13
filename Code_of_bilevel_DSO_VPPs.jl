@@ -35,12 +35,12 @@ load_3=[4,2.1,1.1,1.1,0.7,1,1.9,3.6,3.8,4.2,5.8,5.6,5.8,5.6,5.7,6.1,8,10,9.4,8.2
 
 T=length(load_1)                      # length of market horizon
 
-λ_ES=[0.05,0.05,0.05]                 # ES cost coefficients
-P_ES_max=[0.6,0.6,1.2]                # output bounds of ES
+λ_BS=[0.05,0.05,0.05]                 # ES cost coefficients
+P_BS_max=[0.6,0.6,1.2]                # output bounds of ES
 SOC_min=[0.2,0.2,0.2]                 # min of SOC 
 SOC_max=[0.9,0.9,0.9]                 # max of SOC 
 SOC_initial=[0.4,0.4,0.4]             # initial SOC
-ES_capacity=[1,1,2]                   # capacity of ES
+BS_capacity=[1,1,2]                   # capacity of ES
 
 a_MT=[0.08, 0.1,  0.15]               # MT cost coefficients
 b_MT=[0.9,  0.6,  0.5]                # MT cost coefficients
@@ -65,12 +65,12 @@ for i in 2:T
     @constraint(Lower(model), P_MT_dn[1]<=P_MT_1[i]-P_MT_1[i-1])                   # bounds for MT climbing
 end
 
-@variable(Lower(model), -P_ES_max[1]<=P_ES_1[1:T]<=P_ES_max[1])                    # bounds for ES output
+@variable(Lower(model), -P_BS_max[1]<=P_BS_1[1:T]<=P_BS_max[1])                    # bounds for ES output
 @variable(Lower(model), SOC_min[1]<=SOC_1[1:T]<=SOC_max[1])                        # min and max of SOC 
 @constraint(Lower(model), SOC_1[T]==SOC_initial[1])                                # the initial and end of SOC must be the same
-@constraint(Lower(model), SOC_1[1]==SOC_initial[1]-P_ES_1[1]/ES_capacity[1])       # 0-1 period of SoC, initial SOC is 0.4 here
+@constraint(Lower(model), SOC_1[1]==SOC_initial[1]-P_BS_1[1]/BS_capacity[1])       # 0-1 period of SoC, initial SOC is 0.4 here
 for i in 2:T
-@constraint(Lower(model), SOC_1[i]==SOC_1[i-1]-P_ES_1[i]/ES_capacity[1])           # bouns of SoC in 24 hours
+@constraint(Lower(model), SOC_1[i]==SOC_1[i-1]-P_BS_1[i]/BS_capacity[1])           # bouns of SoC in 24 hours
 end
 
 @variable(Lower(model),0<=P_W_1[i in 1:T]<=P_Wmax_1[i])                            # Wind turbine output upper and lower limits
@@ -79,7 +79,7 @@ end
 @variable(Lower(model),0<=P_VPP_1_p[1:T]<=trade_max[1])                            # set the maximum quantity of electricity traded between VPP and DSO
 @variable(Lower(model),P_VPP_1[1:T])
 @constraint(Lower(model),P_VPP_1[1:T]==P_VPP_1_p-P_VPP_1_s)                        # the quantity of electricity traded between VPP and DSO, positive(purchased), negative (sold)
-@constraint(Lower(model),P_VPP_1+P_MT_1+P_ES_1+P_W_1==load_1)                      # power balance constraint
+@constraint(Lower(model),P_VPP_1+P_MT_1+P_BS_1+P_W_1==load_1)                      # power balance constraint
 
 
 
@@ -92,12 +92,12 @@ for i in 2:T
     @constraint(Lower(model), P_MT_dn[2]<=P_MT_2[i]-P_MT_2[i-1])                   # bounds for MT climbing
 end
 
-@variable(Lower(model), -P_ES_max[2]<=P_ES_2[1:T]<=P_ES_max[2])                    # bounds for ES output
+@variable(Lower(model), -P_BS_max[2]<=P_BS_2[1:T]<=P_BS_max[2])                    # bounds for ES output
 @variable(Lower(model), SOC_min[2]<=SOC_2[1:T]<=SOC_max[2])                        # min and max of SOC 
 @constraint(Lower(model), SOC_2[T]==SOC_initial[2])                                # the initial and end of SOC must be the same
-@constraint(Lower(model), SOC_2[1]==SOC_initial[2]-P_ES_2[1]/ES_capacity[2])       # 0-1 period of SoC, initial SOC is 0.4 here
+@constraint(Lower(model), SOC_2[1]==SOC_initial[2]-P_BS_2[1]/BS_capacity[2])       # 0-1 period of SoC, initial SOC is 0.4 here
 for i in 2:T
-@constraint(Lower(model), SOC_2[i]==SOC_2[i-1]-P_ES_2[i]/ES_capacity[2])           # bouns of SoC in 24 hours
+@constraint(Lower(model), SOC_2[i]==SOC_2[i-1]-P_BS_2[i]/BS_capacity[2])           # bouns of SoC in 24 hours
 end
 
 @variable(Lower(model),0<=P_W_2[i in 1:T]<=P_Wmax_2[i])                            # Wind turbine output upper and lower limits
@@ -106,7 +106,7 @@ end
 @variable(Lower(model),0<=P_VPP_2_p[1:T]<=trade_max[2])                            # set the maximum quantity of electricity traded between VPP and DSO
 @variable(Lower(model),P_VPP_2[1:T])
 @constraint(Lower(model),P_VPP_2[1:T]==P_VPP_2_p-P_VPP_2_s)                        # the quantity of electricity traded between VPP and DSO, positive(purchased), negative (sold)
-@constraint(Lower(model),P_VPP_2+P_MT_2+P_ES_2+P_W_2==load_2)                      # power balance constraint
+@constraint(Lower(model),P_VPP_2+P_MT_2+P_BS_2+P_W_2==load_2)                      # power balance constraint
 
 
 
@@ -119,12 +119,12 @@ for i in 2:T
     @constraint(Lower(model), P_MT_dn[3]<=P_MT_3[i]-P_MT_3[i-1])                   # bounds for MT climbing
 end
 
-@variable(Lower(model), -P_ES_max[3]<=P_ES_3[1:T]<=P_ES_max[3])                    # bounds for ES output
+@variable(Lower(model), -P_BS_max[3]<=P_BS_3[1:T]<=P_BS_max[3])                    # bounds for ES output
 @variable(Lower(model), SOC_min[3]<=SOC_3[1:T]<=SOC_max[3])                        # min and max of SOC 
 @constraint(Lower(model), SOC_3[T]==SOC_initial[3])                                # the initial and end of SOC must be the same
-@constraint(Lower(model), SOC_3[1]==SOC_initial[3]-P_ES_3[1]/ES_capacity[3])       # 0-1 period of SoC, initial SOC is 0.4 here
+@constraint(Lower(model), SOC_3[1]==SOC_initial[3]-P_BS_3[1]/BS_capacity[3])       # 0-1 period of SoC, initial SOC is 0.4 here
 for i in 2:T
-@constraint(Lower(model), SOC_3[i]==SOC_3[i-1]-P_ES_3[i]/ES_capacity[3])           # bouns of SoC in 24 hours
+@constraint(Lower(model), SOC_3[i]==SOC_3[i-1]-P_BS_3[i]/BS_capacity[3])           # bouns of SoC in 24 hours
 end
 
 @variable(Lower(model),0<=P_W_3[i in 1:T]<=P_Wmax_3[i])                            # Wind turbine output upper and lower limits
@@ -133,7 +133,7 @@ end
 @variable(Lower(model),0<=P_VPP_3_p[1:T]<=trade_max[3])                            # set the maximum quantity of electricity traded between VPP and DSO
 @variable(Lower(model),P_VPP_3[1:T])
 @constraint(Lower(model),P_VPP_3[1:T]==P_VPP_3_p-P_VPP_3_s)                        # the quantity of electricity traded between VPP and DSO, positive(purchased), negative (sold)
-@constraint(Lower(model),P_VPP_3+P_MT_3+P_ES_3+P_W_3==load_3)                      # power balance constraint
+@constraint(Lower(model),P_VPP_3+P_MT_3+P_BS_3+P_W_3==load_3)                      # power balance constraint
 
 
 
@@ -183,18 +183,15 @@ end
 
 C_VPP1=sum(λ_VPPp.*P_VPP_1_p-λ_VPPs.*P_VPP_1_s)+
 a_MT[1]*sum(P_MT_1.*P_MT_1)+b_MT[1]*sum(P_MT_1)+c_MT[1]+
-λ_ES[1]*sum(P_ES_1.*P_ES_1)
-#λ_IL[1]*sum(P_IL_1)
+λ_ES[1]*sum(P_BS_1.*P_BS_1)
 
 C_VPP2=sum(λ_VPPp.*P_VPP_2_p-λ_VPPs.*P_VPP_2_s)+
 a_MT[2]*sum(P_MT_2.*P_MT_2)+b_MT[2]*sum(P_MT_2)+c_MT[2]+
-λ_ES[2]*sum(P_ES_2.*P_ES_2)
-#λ_IL[2]*sum(P_IL_2)
+λ_ES[2]*sum(P_BS_2.*P_BS_2)
 
 C_VPP3=sum(λ_VPPp.*P_VPP_3_p-λ_VPPs.*P_VPP_3_s)+
 a_MT[3]*sum(P_MT_3.*P_MT_3)+b_MT[3]*sum(P_MT_3)+c_MT[3]+
-λ_ES[3]*sum(P_ES_3.*P_ES_3)
-#λ_IL[3]*sum(P_IL_3)
+λ_ES[3]*sum(P_BS_3.*P_BS_3)
 
 @objective(Lower(model), Min, C_VPP1+C_VPP2+C_VPP3)
 
