@@ -218,11 +218,11 @@ XLSX.openxlsx("solutions of M=30_game.xlsx", mode="w") do xf
 
 
     sheet["A7"]="P_ES_1"
-    sheet[8,:] = JuMP.value.(P_ES_1)
+    sheet[8,:] = JuMP.value.(P_BS_1)
     sheet["A9"]="P_ES_2"
-    sheet[10,:] = JuMP.value.(P_ES_2)
+    sheet[10,:] = JuMP.value.(P_BS_2)
     sheet["A11"]="P_ES_3"
-    sheet[12,:] = JuMP.value.(P_ES_3)
+    sheet[12,:] = JuMP.value.(P_BS_3)
 
     sheet["A13"]="SOC_1"
     sheet[14,:] = JuMP.value.(SOC_1)
