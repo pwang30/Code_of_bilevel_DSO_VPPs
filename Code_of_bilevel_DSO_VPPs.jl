@@ -183,15 +183,15 @@ end
 
 C_VPP1=sum(λ_VPPp.*P_VPP_1_p-λ_VPPs.*P_VPP_1_s)+
 a_MT[1]*sum(P_MT_1.*P_MT_1)+b_MT[1]*sum(P_MT_1)+c_MT[1]+
-λ_ES[1]*sum(P_BS_1.*P_BS_1)
+λ_BS[1]*sum(P_BS_1.*P_BS_1)
 
 C_VPP2=sum(λ_VPPp.*P_VPP_2_p-λ_VPPs.*P_VPP_2_s)+
 a_MT[2]*sum(P_MT_2.*P_MT_2)+b_MT[2]*sum(P_MT_2)+c_MT[2]+
-λ_ES[2]*sum(P_BS_2.*P_BS_2)
+λ_BS[2]*sum(P_BS_2.*P_BS_2)
 
 C_VPP3=sum(λ_VPPp.*P_VPP_3_p-λ_VPPs.*P_VPP_3_s)+
 a_MT[3]*sum(P_MT_3.*P_MT_3)+b_MT[3]*sum(P_MT_3)+c_MT[3]+
-λ_ES[3]*sum(P_BS_3.*P_BS_3)
+λ_BS[3]*sum(P_BS_3.*P_BS_3)
 
 @objective(Lower(model), Min, C_VPP1+C_VPP2+C_VPP3)
 
