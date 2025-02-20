@@ -19,7 +19,7 @@ The main work includes:
 
 The following is the program running process (assuming it is in Visual Studio Code):
 - Step 1: How to install [Julia in VsCode](https://code.visualstudio.com/docs/languages/julia).
-- Step 2: In the comments of this program, there are necessary package installation instructions, just copy and paste.
+- Step 2: In the comments of the code, there are necessary package installation instructions, just copy and paste.
 - Step 3: Run the program.
 
 **Note that this work can be easily extended to larger-scale problems because of the structural independence of each agent, such as those involving more
