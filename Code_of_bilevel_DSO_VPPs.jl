@@ -11,6 +11,9 @@
 #----------------------Pkgs introduction-----------------------
 
 import Pkg 
+Pkg.add(JuMP)
+Pkg.add(BilevelJuMP)
+Pkg.add(SCIP)
 using JuMP,BilevelJuMP,SCIP,XLSX   
 
 #----------------------define model----------------------------
