@@ -29,7 +29,7 @@ aggregators and DER, and market mechanisms (demand response, time-of-use tariff,
 
 If you find something helpful or use this code for your own work, please cite this paper:
 <ol>
-      Wang, Peng, Xi Zhang, and Luis Badesa. "Analyzing the Role of the DSO in Electricity Trading of VPPs via a Stackelberg Game Model." arXiv preprint arXiv:2501.07715 (2025).
+     P. Wang, X. Zhang and L. Badesa, "Analyzing the Role of the DSO in Electricity Trading of VPPs via a Stackelberg Game Model," 2025 IEEE Kiel PowerTech, Kiel, Germany, 2025, pp. 1-6, doi: 10.1109/PowerTech59965.2025.11180491.
 </ol>
       <br>
       
