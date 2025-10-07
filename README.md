@@ -34,13 +34,14 @@ If you find something helpful or use this code for your own work, please cite th
       <br>
       
 <ol> 
-@misc{wang2025analyzingroledsoelectricity, <br>
-      title={Analyzing the Role of the DSO in Electricity Trading of VPPs via a Stackelberg Game Model}, <br>
-      author={Peng Wang and Xi Zhang and Luis Badesa},<br>
-      year={2025},<br>
-      eprint={2501.07715},<br>
-      archivePrefix={arXiv},<br>
-      primaryClass={eess.SY},<br>
-      url={https://arxiv.org/abs/2501.07715}, <br>
-}
+@INPROCEEDINGS{11180491, <br>
+  author={Wang, Peng and Zhang, Xi and Badesa, Luis}, <br>
+  booktitle={2025 IEEE Kiel PowerTech}, <br>
+  title={Analyzing the Role of the DSO in Electricity Trading of VPPs via a Stackelberg Game Model}, <br>
+  year={2025},<br>
+  volume={},<br>
+  number={},<br>
+  pages={1-6},<br>
+  keywords={Costs;Profitability;Games;Virtual power plants;Electricity supply industry;Market research;Power markets;Regulation;Stakeholders;Optimization;Electricity market;bilevel optimization;virtual power plants;distribution system operator},<br>
+  doi={10.1109/PowerTech59965.2025.11180491}}<br>
 </ol>  
