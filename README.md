@@ -45,3 +45,7 @@ If you find something helpful or use this code for your own work, please cite th
   keywords={Costs;Profitability;Games;Virtual power plants;Electricity supply industry;Market research;Power markets;Regulation;Stakeholders;Optimization;Electricity market;bilevel optimization;virtual power plants;distribution system operator},<br>
   doi={10.1109/PowerTech59965.2025.11180491}}<br>
 </ol>  
+
+----
+
+This work was supported by MICIU/AEI/10.13039/501100011033 and ERDF/EU under grant PID2023-150401OA-C22, as well as by the Madrid Government (Comunidad de Madrid-Spain) under the Multiannual Agreement 2023-2026 with Universidad Politécnica de Madrid, ``Line A - Emerging PIs''. The work of Peng Wang was also supported by China Scholarship Council under grant 202408500065.
