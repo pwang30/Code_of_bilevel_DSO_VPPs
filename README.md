@@ -49,3 +49,10 @@ If you find something helpful or use this code for your own work, please cite th
 ----
 
 This work was supported by MICIU/AEI/10.13039/501100011033 and ERDF/EU under grant PID2023-150401OA-C22, as well as by the Madrid Government (Comunidad de Madrid-Spain) under the Multiannual Agreement 2023-2026 with Universidad Politécnica de Madrid, ``Line A - Emerging PIs''. The work of Peng Wang was also supported by China Scholarship Council under grant 202408500065.
+
+<figure style="display:inline-block; margin:10px; text-align:center;">
+   <img src="./logos/MICIU+Cofinanciado+AEI.jpg" style="width:600px; height:140px; object-fit:contain; display:block;">
+</figure>
+<figure style="display:inline-block; margin:10px; text-align:center;">
+   <img src="./logos/Logo_CM.png" style="width:200px; height:160px; object-fit:contain; display:block;">
+</figure>
